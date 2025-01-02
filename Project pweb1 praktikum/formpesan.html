@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pemesanan</title>
+  <link rel="stylesheet" href="formpesan.css">
+  <script src="formpesan.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Form Pemesanan</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="namaPemesan">Nama Pemesan:</label>
+        <input type="text" id="namaPemesan" name="namaPemesan" required>
+      </div>
+      <div class="form-group">
+        <label for="jenisKelamin">Jenis Kelamin:</label>
+        <select id="jenisKelamin" name="jenisKelamin" required>
+          <option value="">Pilih Laki-Laki atau Perempuan</option>
+          <option value="Laki-Laki">Laki-Laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nomorIdentitas">Nomor Identitas:</label>
+        <input type="text" id="nomorIdentitas" name="nomorIdentitas" required>
+      </div>
+      <div class="form-group">
+        <label for="tipeKamar">Tipe Kamar:</label>
+        <select id="tipeKamar" name="tipeKamar" required>
+          <option value="">--Pilih--</option>
+          <option value="standard">Standar</option>
+          <option value="deluxe">Deluxe</option>
+          <option value="family">Family</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="harga">Harga:</label>
+        <input type="text" id="harga" name="harga" required placeholder="Masukkan harga manual" />
+      </div>
+      <div class="form-group">
+        <label for="tanggalPesan">Tanggal Pesan:</label>
+        <input type="date" id="tanggalPesan" name="tanggalPesan" required>
+      </div>
+      <div class="form-group">
+        <label for="durasiMenginap">Durasi Menginap (Hari):</label>
+        <input type="number" id="durasiMenginap" name="durasiMenginap" required>
+      </div>
+      <div class="form-group">
+        <label for="breakfast">Termasuk Breakfast (Rp 80.000):</label>
+        <input type="checkbox" id="breakfast" name="breakfast">
+      </div>
+      <div class="form-group">
+        <label for="diskon">Diskon 10% Jika Menginap >3 Hari:</label>
+        <input type="text" id="diskon" name="diskon" readonly>
+      </div>
+      <div class="form-group">
+        <label for="totalBayar">Total Bayar:</label>
+        <input type="text" id="totalBayar" name="totalBayar" readonly>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="simpan" onclick="hitungTotal()">Simpan</button>
+        <a href="luxuryhotel.html">
+          <button type="button" class="back">Kembali</button>
+        </a>
+        <button type="button" class="cetak" onclick="simpanPemesanan()">Cetak</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
